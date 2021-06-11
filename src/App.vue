@@ -1,5 +1,60 @@
 <template>
   <div id="app">
+    <h2>输入框</h2>
+    <div>
+      <t-input v-model="input" value="123">
+        <t-icon slot="prefix" name="close-o" />
+        <t-icon slot="suffix" name="close-o" />
+        <template slot="before">http://</template>
+        <template slot="after">.com</template>
+      </t-input>
+    </div>
+    <div>
+      <t-input v-model="input" prefix-icon="share" value="123" suffix-icon="share">
+        <template slot="before">http://</template>
+        <template slot="after">.com</template>
+      </t-input>
+    </div>
+    <div>
+      <t-input v-model="input" prefix-icon="share" value="123" show-password>
+        <template slot="before">http://</template>
+        <template slot="after">.com</template>
+      </t-input>
+    </div>
+    <div class="row demo-input-addon">
+      <t-input v-model="input" value="123">
+        <template slot="before">http://</template>
+      </t-input>
+      <br>
+      <br>
+      <t-input v-model="input" value="123">
+        <template slot="after">.com</template>
+      </t-input>
+      <br>
+      <br>
+      <t-input v-model="input" value="123">
+        <template slot="before">http://</template>
+        <template slot="after">.com</template>
+      </t-input>
+    </div>
+    <div class="row demo-input">
+      <t-input v-model="input" value="123" />
+      <t-input v-model="input4" placeholder="请输入内容" />
+      <t-input disabled placeholder="请输入内容" />
+      <br>
+      <br>
+      <t-input v-model="input2" show-password class="show-password-demo" />
+      <t-input v-model="input3" clearable />
+
+      <p>{{ 'input：' + input }}</p>
+      <p>{{ 'input2：' + input2 }}</p>
+      <p>{{ 'input3：' + input3 }}</p>
+      <p>{{ 'input4：' + input4 }}</p>
+      <div>
+        <t-input v-model="input5" type="textarea" placeholder="请输入内容" />
+        <p>{{ 'input5：' + input5 }}</p>
+      </div>
+    </div>
     <h2>按钮</h2>
     <div class="row">
       <span class="label">英文：</span>
@@ -17,10 +72,10 @@
     </div>
     <div class="row">
       <span class="label">Icon 按钮：</span>
-      <t-button icon="bug">默认按钮</t-button>
-      <t-button type="primary" icon="bug">主要按钮</t-button>
-      <t-button icon="bug" error>警告按钮</t-button>
-      <t-button type="primary" icon="bug" error>警告按钮</t-button>
+      <t-button icon="search">默认按钮</t-button>
+      <t-button type="primary" icon="calendar">主要按钮</t-button>
+      <t-button icon="share" error>警告按钮</t-button>
+      <t-button type="primary" icon="calendar-dates" error>警告按钮</t-button>
     </div>
     <div class="row">
       <span class="label">禁用状态：</span>
@@ -92,7 +147,12 @@ export default {
   data() {
     return {
       isLoading: true,
-      isCount: false
+      isCount: false,
+      input: '我是input',
+      input2: '我是input',
+      input3: '我是input',
+      input4: '',
+      input5: ''
     }
   },
   methods: {
@@ -110,6 +170,7 @@ export default {
   width: 670px;
   margin: 0 auto;
   padding: 0 20px;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
 }
 h2 {
   text-align: center;
