@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h2>输入框</h2>
+<!--     <h2>输入框</h2>
     <div>
       <t-input v-model="input" value="123">
         <t-icon slot="prefix" name="close-o" />
@@ -54,7 +54,7 @@
         <t-input v-model="input5" type="textarea" placeholder="请输入内容" />
         <p>{{ 'input5：' + input5 }}</p>
       </div>
-    </div>
+    </div> -->
     <h2>按钮</h2>
     <div class="row">
       <span class="label">英文：</span>
@@ -115,7 +115,7 @@
       </t-button-group>
       <t-button-group />
     </div>
-    <h2>倒计时</h2>
+    <!-- <h2>倒计时</h2>
     <div class="row">
       <span class="label">倒计时按钮：</span>
       <t-countdown
@@ -132,7 +132,7 @@
       <span class="label">Icon 组件：</span>
       <t-icon name="alarm" />
       <t-icon name="aspect-ratio" />
-    </div>
+    </div> -->
 
   </div>
 </template>
