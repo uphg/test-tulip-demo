@@ -3,9 +3,8 @@ import App from './App.vue'
 // import 'tulip-ui/dist/css/main.css'
 import tulip from 'tulip-ui'
 const { Button, ButtonGroup } = tulip
-
-// console.log('tulip')
-// console.log(tulip)
+console.log('Button')
+console.log(Button)
 
 Vue.config.productionTip = false
 
