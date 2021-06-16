@@ -1,19 +1,26 @@
 # test-tulip-demo
 
-## Project setup
-```
+测试 Tulip UI 创建的项目 demo
+
+
+
+## 运行命令
+
+初始化
+
+```sh
 yarn install
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
+运行
+
+```sh
+yarn start
 ```
 
-### Compiles and minifies for production
-```
-yarn build
+本地测试
+
+```shell
+yarn link tulip-ui
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
